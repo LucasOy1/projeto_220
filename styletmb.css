@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #16a34a; /* Aplicando a cor de fundo da página */
+    background-color: #335471; /* Aplicando a cor de fundo da página */
     display: grid; 
     grid-template-columns: 1fr 1fr; /* Dividindo a página em dois lados para aplicação da cor do lado esquerdo e a imagem do lado direito */
     height: 100vh;
@@ -44,7 +44,7 @@ a span {
 
 a span:hover {
     cursor: pointer;
-    color: #16a34a;
+    color: #335471;
 }
 
 header img {
@@ -56,14 +56,14 @@ header img {
     cursor: pointer;
 }
 
-#lado-esquerdo h2{
+#lado-esquerdotmb h2{
     color: #f8fafc;
     font-size: 6vh;
     margin-top: 14vh;
 }
 
-#lado-esquerdo{ 
-    background-color: #16a34a;
+#lado-esquerdotmb{ 
+    background-color: #335471;
     grid-column: 1; /* Escolhendo o lado da tela que o elemento vai aparecer, nesse caso, do lado esquerdo */
     height: 100vh;
     display: flex;
@@ -72,15 +72,15 @@ header img {
     align-items: center;
 }
 
-#lado-direito {
-    background-image: url('/imgs/background.jpg'); /* Aplicando a imagem do lado direito da página */
+#lado-direitotmb {
+    background-image: url('/imgs/TMB.png'); /* Aplicando a imagem do lado direito da página */
     background-size: cover;
     background-position: center; 
     grid-column: 2; /* Escolhendo qual lado da tela que o elemento vai aparecer, nesse caso, do lado direito */
     height: 100vh;
 }
 
-#container{
+#containertmb{
     position: absolute; /* Para que a cor do lado esquerdo e imagem não sobreponham os elementos da página, o termo "absolute" é necessário para eles serem absolutos na tela */
     top: 0; 
     left: 0; 
@@ -96,11 +96,11 @@ header img {
     width: 31rem;
 }
 
-#calculadora {
+#calculadoratmb {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 2rem;
+    padding: 1.2rem;
     color: #f8fafc;
     background-color: rgb(38, 38, 38, 0.9);
     border-radius: 8px;
@@ -120,7 +120,7 @@ header img {
 .title::after { /* Traço verde em baixo do texto "Calculadora - IMC" */
     position: absolute;
     content: '';
-    background-color: #16a34a;
+    background-color: #335471;
     width: 8rem;
     height: 3px;
     bottom: 0;
@@ -146,7 +146,7 @@ header img {
 }
 
 .input-box label{
-    background-color: #16a34a;
+    background-color: #335471;
     padding: 0.2rem;
     border-radius: 3px;
     font: 1.1rem;
@@ -193,7 +193,7 @@ header img {
     border: none;
     font-size: 1.25rem;
     font-weight: bold;
-    background-color: #16a34a;
+    background-color: #335471;
     color: #f8fafc;
     padding: 0.5rem 0;
     border-radius: 3px;
@@ -208,14 +208,14 @@ header img {
     padding: 0.75rem 0;
 }
 
-#imc {
+#tmb {
     display: flex;
     align-items: center;
     flex-direction: column;
     font-size: 2.25rem;
 }
 
-#imc span:last-child {
+#tmb span:last-child {
     font-size: 0.875rem;
     color: #cbd5e1;
 }
@@ -228,11 +228,15 @@ header img {
     display: none;
 }
 
-.normal { /* Cor para quando os parâmetros do IMC forem normais */
+.normal { /* Cor para quando os parâmetros do TMB forem normais */
     color: #16a34a;
 }
 
-.atencao { /* Cor para quando os parâmetros do IMC forem preocupantes */
+.moderado { /* Cor para quando os parâmetros do TMB forem moderados */
+    color: #da910a; 
+}
+
+.atencao { /* Cor para quando os parâmetros do TMB forem preocupantes */
     color: #dc2626;
 }
 

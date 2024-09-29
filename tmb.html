@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de TMB</title>
+
+    <link rel="stylesheet" href="/styletmb.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body class="tmb">
+    <header>
+        <a href="/index.html"><img src="/imgs/logo.png" alt="logo"><span class="title">Nome do site</span></a>
+    </header>
+    <div id="lado-esquerdotmb">
+        <h2>Nome do Site</h2>
+    </div>
+    <div id="lado-direitotmb"></div>
+    <main id="containertmb">
+        <section id="img">
+            <img src="/imgs/logo.png" alt="logo">
+        </section>
+
+        <section id="calculadoratmb">
+            <form id="form">
+                <h2 class="title">Calculadora - TMB</h2>
+
+                <div id="sexualidade" class="input-box">
+                    <label for="sexo" >
+                        Sexo
+                    </label>
+                    <div>
+                        <select id="sexo" class="input-field">
+                            <option value="M">Masculino</option>
+                            <option value="F">Feminino</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="peso">
+                        Peso em Kg
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-weight-hanging"></i>
+                        <input step="0.01" type="number" id="peso" required onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189" oninvalid="this.setCustomValidity ('Por favor, digite o seu peso em kg.')" oninput="this.setCustomValidity('')">
+                        <span>
+                            Kg
+                        </span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="altura">
+                        Altura em metros
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-ruler"></i>
+                        <input step="0.01" type="number" id="altura" required onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189" oninvalid="this.setCustomValidity ('Por favor, digite a sua altura em metros.')" oninput="this.setCustomValidity('')">
+                        <span>
+                            cm
+                        </span>
+                    </div>
+                </div>
+
+                <div class="input-box">
+                    <label for="idade">
+                        Idade
+                    </label>
+                    <div class="input-field">
+                        <i class="fa-solid fa-cake-candles"></i>
+                        <input step="0.01" type="number" id="idade" required onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189" oninvalid="this.setCustomValidity ('Por favor, digite a sua idade.')" oninput="this.setCustomValidity('')">
+                        <span>
+                            anos
+                        </span>
+                    </div>
+                </div>
+
+                <button id="calcular">
+                    Calcular
+                </button>
+            </form>
+            <div id="infos" class="hidden">
+                <div id="result">
+                    <div id="tmb">
+                        <span id="value"></span>
+                        <span>Seu TMB</span>
+                    </div>
+                    <div id="description">
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="/scripttmb.js"></script>
+</body>
+</html>
