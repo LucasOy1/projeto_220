@@ -56,12 +56,6 @@ header img {
     cursor: pointer;
 }
 
-#lado-esquerdotmb h2{
-    color: #f8fafc;
-    font-size: 6vh;
-    margin-top: 14vh;
-}
-
 #lado-esquerdotmb{ 
     background-color: #335471;
     grid-column: 1; /* Escolhendo o lado da tela que o elemento vai aparecer, nesse caso, do lado esquerdo */
@@ -77,7 +71,7 @@ header img {
     background-size: cover;
     background-position: center; 
     grid-column: 2; /* Escolhendo qual lado da tela que o elemento vai aparecer, nesse caso, do lado direito */
-    height: 100vh;
+    height: 800px;
 }
 
 #containertmb{
@@ -94,13 +88,15 @@ header img {
 
 #img img {
     width: 31rem;
+    align-items: center;
 }
 
 #calculadoratmb {
+    margin-top: 10rem;
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 1.2rem;
+    padding: 1rem;
     color: #f8fafc;
     background-color: rgb(38, 38, 38, 0.9);
     border-radius: 8px;
@@ -159,9 +155,9 @@ header img {
     align-items: center;
     justify-content: space-between;
     background-color: #3f3f46;
-    padding: 0.3rem;
+    padding: 0.2rem;
     border-radius: 3px;
-    margin-top: 6px;
+    margin-top: 4px;
 }
 
 .input-field span,
@@ -242,8 +238,16 @@ header img {
 
 /* Aqui o design da página irá mudar conforme a tela do usuário for diminuindo */
 @media screen and (max-width: 1024px){ 
-    #img, #lado-direito, #lado-esquerdo {
+    #img, #lado-direitotmb, #lado-esquerdotmb {
         display: none;
+    }
+
+    header{
+        height: 10%;
+    }
+    
+    #calculadoratmb {
+        z-index: 3;
     }
 }
 
