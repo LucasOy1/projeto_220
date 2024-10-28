@@ -3,10 +3,10 @@ const form = document.getElementById('form');
 form.addEventListener('submit', function(event) {
     event.preventDefault();
 
-    const peso = document.getElementById('peso').value;
-    const altura = document.getElementById('altura').value;
-    const idade = document.getElementById('idade').value;
-    const sexo = document.getElementById('sexo').value;
+    const peso = document.getElementById('pesotmb').value;
+    const altura = document.getElementById('alturatmb').value;
+    const idade = document.getElementById('idadetmb').value;
+    const sexo = document.getElementById('sexotmb').value;
 
     const tmbM = (88.362 + (13.397 * peso) + (4.799 * altura) - (5.677 * idade)).toFixed(2);
     const tmbF = (447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 * idade)).toFixed(2);
