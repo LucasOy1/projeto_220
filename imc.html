@@ -26,11 +26,11 @@
                 <h2 class="title">Calculadora - IMC</h2>
 
                 <div id="sexualidade" class="input-box">
-                    <label for="sexo" >
+                    <label for="sexoimc" >
                         Sexo
                     </label>
                     <div>
-                        <select id="sexo" class="input-field">
+                        <select id="sexoimc" class="input-field">
                             <option value="M">Masculino</option>
                             <option value="F">Feminino</option>
                         </select>
@@ -38,12 +38,12 @@
                 </div>
 
                 <div class="input-box">
-                    <label for="peso">
+                    <label for="pesoimc">
                         Peso em Kg
                     </label>
                     <div class="input-field">
                         <i class="fa-solid fa-weight-hanging"></i>
-                        <input step="0.01" type="number" id="peso" required onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189" oninvalid="this.setCustomValidity ('Por favor, digite o seu peso em kg.')" oninput="this.setCustomValidity('')">
+                        <input step="0.01" type="number" id="pesoimc" required onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189" oninvalid="this.setCustomValidity ('Por favor, digite o seu peso em kg.')" oninput="this.setCustomValidity('')">
                         <span>
                             Kg
                         </span>
@@ -51,12 +51,12 @@
                 </div>
 
                 <div class="input-box">
-                    <label for="altura">
+                    <label for="alturaimc">
                         Altura em metros
                     </label>
                     <div class="input-field">
                         <i class="fa-solid fa-ruler"></i>
-                        <input step="0.01" type="number" id="altura" required onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189" oninvalid="this.setCustomValidity ('Por favor, digite a sua altura em metros.')" oninput="this.setCustomValidity('')">
+                        <input step="0.01" type="number" id="alturaimc" required onkeydown="return event.keyCode !== 69 && event.keyCode !== 187 && event.keyCode !== 189" oninvalid="this.setCustomValidity ('Por favor, digite a sua altura em metros.')" oninput="this.setCustomValidity('')">
                         <span>
                             cm
                         </span>
@@ -68,7 +68,7 @@
                 </button>
             </form>
             <div id="infos" class="hidden">
-                <div id="result">
+                <div id="resultimc">
                     <div id="imc">
                         <span id="value"></span>
                         <span>Seu IMC</span>
