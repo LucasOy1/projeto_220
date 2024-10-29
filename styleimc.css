@@ -241,6 +241,14 @@ header img {
     #img, #lado-direito, #lado-esquerdo {
         display: none;
     }
+
+    header{
+        height: 10%;
+    }
+    
+    #calculadora {
+        z-index: 3;
+    }
 }
 
 @media creen and (max-width: 500px) {
