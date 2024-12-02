@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #335471; /* Aplicando a cor de fundo da página */
+    background-color: #234f81; /* Aplicando a cor de fundo da página */
     display: grid; 
     grid-template-columns: 1fr 1fr; /* Dividindo a página em dois lados para aplicação da cor do lado esquerdo e a imagem do lado direito */
     height: 100vh;
@@ -44,7 +44,7 @@ a span {
 
 a span:hover {
     cursor: pointer;
-    color: #335471;
+    color: #234f81;
 }
 
 header img {
@@ -56,8 +56,14 @@ header img {
     cursor: pointer;
 }
 
-#lado-esquerdotmb{ 
-    background-color: #335471;
+#lado-esquerdo h2{
+    color: #f8fafc;
+    font-size: 6vh;
+    margin-top: 14vh;
+}
+
+#lado-esquerdo{ 
+    background-color: #234f81;
     grid-column: 1; /* Escolhendo o lado da tela que o elemento vai aparecer, nesse caso, do lado esquerdo */
     height: 100vh;
     display: flex;
@@ -66,15 +72,15 @@ header img {
     align-items: center;
 }
 
-#lado-direitotmb {
+#lado-direito {
     background-image: url('/imgs/TMB.png'); /* Aplicando a imagem do lado direito da página */
     background-size: cover;
     background-position: center; 
     grid-column: 2; /* Escolhendo qual lado da tela que o elemento vai aparecer, nesse caso, do lado direito */
-    height: 800px;
+    height: 100vh;
 }
 
-#containertmb{
+#container{
     position: absolute; /* Para que a cor do lado esquerdo e imagem não sobreponham os elementos da página, o termo "absolute" é necessário para eles serem absolutos na tela */
     top: 0; 
     left: 0; 
@@ -88,15 +94,14 @@ header img {
 
 #img img {
     width: 31rem;
-    align-items: center;
 }
 
-#calculadoratmb {
-    margin-top: 10rem;
+#calculadora {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 1rem;
+    margin-top: 8rem;
+    padding: 1.2rem;
     color: #f8fafc;
     background-color: rgb(38, 38, 38, 0.9);
     border-radius: 8px;
@@ -116,7 +121,7 @@ header img {
 .title::after { /* Traço verde em baixo do texto "Calculadora - IMC" */
     position: absolute;
     content: '';
-    background-color: #335471;
+    background-color: #234f81;
     width: 8rem;
     height: 3px;
     bottom: 0;
@@ -142,7 +147,7 @@ header img {
 }
 
 .input-box label{
-    background-color: #335471;
+    background-color: #234f81;
     padding: 0.2rem;
     border-radius: 3px;
     font: 1.1rem;
@@ -155,9 +160,9 @@ header img {
     align-items: center;
     justify-content: space-between;
     background-color: #3f3f46;
-    padding: 0.2rem;
+    padding: 0.3rem;
     border-radius: 3px;
-    margin-top: 4px;
+    margin-top: 6px;
 }
 
 .input-field span,
@@ -189,7 +194,7 @@ header img {
     border: none;
     font-size: 1.25rem;
     font-weight: bold;
-    background-color: #335471;
+    background-color: #234f81;
     color: #f8fafc;
     padding: 0.5rem 0;
     border-radius: 3px;
@@ -204,14 +209,14 @@ header img {
     padding: 0.75rem 0;
 }
 
-#tmb {
+#imc {
     display: flex;
     align-items: center;
     flex-direction: column;
     font-size: 2.25rem;
 }
 
-#tmb span:last-child {
+#imc span:last-child {
     font-size: 0.875rem;
     color: #cbd5e1;
 }
@@ -220,25 +225,71 @@ header img {
     width: 15.5rem;
 }
 
+#modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#modal.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #000;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#saiba-mais-link {
+    color: #234f81;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#saiba-mais-link:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .hidden { /* Esconde o resultado do IMC até que o usuário digite os valores necessários (ele vai reaparecer quando for programado no JS) */
     display: none;
 }
 
-.normal { /* Cor para quando os parâmetros do TMB forem normais */
-    color: #16a34a;
+.normal { /* Cor para quando os parâmetros do IMC forem normais */
+    color: #234f81;
 }
 
-.moderado { /* Cor para quando os parâmetros do TMB forem moderados */
-    color: #da910a; 
-}
-
-.atencao { /* Cor para quando os parâmetros do TMB forem preocupantes */
+.atencao { /* Cor para quando os parâmetros do IMC forem preocupantes */
     color: #dc2626;
 }
 
 /* Aqui o design da página irá mudar conforme a tela do usuário for diminuindo */
-@media screen and (max-width: 1024px){ 
-    #img, #lado-direitotmb, #lado-esquerdotmb {
+@media screen and (max-width: 1424px){ 
+    #img, #lado-direito, #lado-esquerdo {
         display: none;
     }
 
@@ -246,10 +297,11 @@ header img {
         height: 10%;
     }
     
-    #calculadoratmb {
+    #calculadora {
         z-index: 3;
     }
 }
+
 
 @media creen and (max-width: 500px) {
     #container {

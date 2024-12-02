@@ -1,0 +1,93 @@
+/* Fonte de texto importada. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #7a7a7a; /* Cor de fundo laranja */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: #f8fafc;
+}
+
+a span {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+#container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+#lado-esquerdo {
+    background-color: #3f3f46;
+    color: #f8fafc;
+    padding: 3rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+#lado-esquerdo h2 {
+    font-size: 2rem;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 1rem 2rem;
+    background-color: #2c2c2c;
+    color: #f8fafc;
+    font-size: 1.25rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+#btn1:hover {
+    background-color: #16a34a;
+}
+
+#btn2:hover {
+    background-color: #234f81;
+}
+
+#btn3:hover {
+    background-color: #e06924;
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    body {
+        flex-direction: column;
+        height: auto;
+    }
+    header {
+        text-align: center;
+    }
+    #lado-esquerdo {
+        padding: 2rem;
+    }
+    .btn {
+        font-size: 1rem;
+        padding: 1rem;
+    }
+}

@@ -11,45 +11,45 @@ form.addEventListener('submit', function(event) {
     const tmbM = (88.362 + (13.397 * peso) + (4.799 * altura) - (5.677 * idade)).toFixed(2);
     const tmbF = (447.593 + (9.247 * peso) + (3.098 * altura) - (4.330 * idade)).toFixed(2);
 
-    const value = document.getElementById('value')
-    let description = '';
+    const modal = document.getElementById('modal');
+    const value = document.getElementById('modal-value');
+    const description = document.getElementById('modal-description');
+    const closeBtn = document.querySelector('.close-btn');
 
-    value.classList.add('atencao');
-    value.classList.add('moderado');
+    modal.classList.add('show');
 
-    document.getElementById('infos').classList.remove('hidden');
+    let resultText = '';
+    let classification = '';
 
     if (sexo == 'M') {
         value.textContent = tmbM.replace('.', ',');
         if(tmbM > 1600 && tmbM <= 2400){
-            description = 'Parabéns! Sua TMB está em uma faixa saudável.'
-            value.classList.remove('atencao');
-            value.classList.remove('moderado');
+            resultText = '✅ Sua taxa metabólica basal está ótima!';
         } else if (tmbM > 2400 && tmbM <= 2800){
-            description = 'Sua TMB está acima do esperado.'
-            value.classList.remove('normal');
-            value.classList.remove('atencao');
-            value.classList.add('moderado');
+            resultText = '🔍 Sua TMB está ligeiramente elevada.';
         } else {
-            description = 'Sua TMB está fora do recomendado.'
-            value.classList.add('atencao');
-    
+            resultText = '⚠️ Sua TMB está abaixo do recomendado.';
         }
-    } else { //Lógica feminina
+    } else { // Lógica feminina
         value.textContent = tmbF.replace('.', ',');
         if(tmbF > 1400 && tmbF <= 2000){
-            description = 'Parabéns! Sua TMB está em uma faixa saudável.'
-            value.classList.remove('atencao');
-            value.classList.remove('moderado');
+            resultText = '✅ Sua taxa metabólica basal está ótima!';
         } else if (tmbF > 2000 && tmbF <= 2400){
-            description = 'Sua TMB está acima do esperado.'
-            value.classList.remove('normal');
-            value.classList.add('moderado');
+            resultText = '🔍 Sua TMB está ligeiramente elevada.';
         } else {
-            description = 'Sua TMB está fora do recomendado.'
-            value.classList.add('atencao');
+            resultText = '⚠️ Sua TMB está abaixo do recomendado.';
         }
     }
 
-    document.getElementById('description').textContent = description;
-})
+    description.innerHTML = `${classification} ${resultText}`;
+
+    closeBtn.addEventListener('click', function() {
+        modal.classList.remove('show');
+    });
+
+    window.addEventListener('click', function(event) {
+        if (event.target === modal) {
+            modal.classList.remove('show');
+        }
+    });
+});

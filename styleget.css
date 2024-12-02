@@ -9,7 +9,7 @@
 }
 
 body {
-    background-color: #16a34a; /* Aplicando a cor de fundo da página */
+    background-color: #e06924; /* Aplicando a cor de fundo da página */
     display: grid; 
     grid-template-columns: 1fr 1fr; /* Dividindo a página em dois lados para aplicação da cor do lado esquerdo e a imagem do lado direito */
     height: 100vh;
@@ -44,7 +44,7 @@ a span {
 
 a span:hover {
     cursor: pointer;
-    color: #16a34a;
+    color: #e06924;
 }
 
 header img {
@@ -63,7 +63,7 @@ header img {
 }
 
 #lado-esquerdo{ 
-    background-color: #16a34a;
+    background-color: #e06924;
     grid-column: 1; /* Escolhendo o lado da tela que o elemento vai aparecer, nesse caso, do lado esquerdo */
     height: 100vh;
     display: flex;
@@ -73,7 +73,7 @@ header img {
 }
 
 #lado-direito {
-    background-image: url('/imgs/background.jpg'); /* Aplicando a imagem do lado direito da página */
+    background-image: url('/imgs/CGE.png'); /* Aplicando a imagem do lado direito da página */
     background-size: cover;
     background-position: center; 
     grid-column: 2; /* Escolhendo qual lado da tela que o elemento vai aparecer, nesse caso, do lado direito */
@@ -100,7 +100,8 @@ header img {
     display: flex;
     flex-direction: column;
     gap: 2rem;
-    padding: 1.2rem;
+    padding: 1rem;
+    margin-top: 130px;
     color: #f8fafc;
     background-color: rgb(38, 38, 38, 0.9);
     border-radius: 8px;
@@ -109,18 +110,18 @@ header img {
 #form {
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 1.6rem;
 }
 
 .title {
-    font-size: 2.25rem;
+    font-size: 2rem;
     position: relative;
 }
 
-.title::after { /* Traço verde em baixo do texto "Calculadora - IMC" */
+.title::after { /* Traço verde em baixo do texto "Calculadora - GET" */
     position: absolute;
     content: '';
-    background-color: #16a34a;
+    background-color: #e06924;
     width: 8rem;
     height: 3px;
     bottom: 0;
@@ -128,7 +129,8 @@ header img {
     border: 3px;
 }
 
-#sexualidade select {
+#sexualidade select,
+#atividade select {
     padding: 0.5rem;
     border: none;
     border-radius: 3px;
@@ -146,7 +148,7 @@ header img {
 }
 
 .input-box label{
-    background-color: #16a34a;
+    background-color: #e06924;
     padding: 0.2rem;
     border-radius: 3px;
     font: 1.1rem;
@@ -193,7 +195,7 @@ header img {
     border: none;
     font-size: 1.25rem;
     font-weight: bold;
-    background-color: #16a34a;
+    background-color: #e06924;
     color: #f8fafc;
     padding: 0.5rem 0;
     border-radius: 3px;
@@ -208,20 +210,16 @@ header img {
     padding: 0.75rem 0;
 }
 
-#imc {
+#get {
     display: flex;
     align-items: center;
     flex-direction: column;
     font-size: 2.25rem;
 }
 
-#imc span:last-child {
+#get span:last-child {
     font-size: 0.875rem;
     color: #cbd5e1;
-}
-
-#description {
-    width: 15.5rem;
 }
 
 #modal {
@@ -264,7 +262,7 @@ header img {
 }
 
 #saiba-mais-link {
-    color: #16a34a;
+    color: #e06924;
     text-decoration: none;
     font-weight: bold;
 }
@@ -274,15 +272,15 @@ header img {
     cursor: pointer;
 }
 
-.hidden { /* Esconde o resultado do IMC até que o usuário digite os valores necessários (ele vai reaparecer quando for programado no JS) */
+.hidden { /* Esconde o resultado do GET até que o usuário digite os valores necessários (ele vai reaparecer quando for programado no JS) */
     display: none;
 }
 
-.normal { /* Cor para quando os parâmetros do IMC forem normais */
+.normal { /* Cor para quando os parâmetros do GET forem normais */
     color: #16a34a;
 }
 
-.atencao { /* Cor para quando os parâmetros do IMC forem preocupantes */
+.atencao { /* Cor para quando os parâmetros do GET forem preocupantes */
     color: #dc2626;
 }
 
@@ -290,6 +288,10 @@ header img {
 @media screen and (max-width: 1424px){ 
     #img, #lado-direito, #lado-esquerdo {
         display: none;
+    }
+
+    #calculadora {
+        margin-top: 130px;
     }
 
     header{

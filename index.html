@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Página Principal</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="imc()">Calcular IMC</button><br>
-    <button onclick="tmb()">Calcular TMB</button>
-
-    <script src="/script.js"></script>
+    <div id="container">
+        <div id="lado-esquerdo">
+            <h2>Bem-vindo ao CalcSaúde!</h2>
+            <div class="buttons">
+                <a href="imc.html" class="btn" id="btn1">Ir Calcular o IMC</a>
+                <a href="tmb.html" class="btn" id="btn2">Ir Calcular o TMB</a>
+                <a href="get.html" class="btn" id="btn3">Ir Calcular o GET</a>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
